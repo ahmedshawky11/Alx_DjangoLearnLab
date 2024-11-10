@@ -1,9 +1,10 @@
-# Update Operation
-
 ```python
-book.title = "Nineteen Eighty-Four"
-book.save()
+from bookshelf.models import Book
 
-print(book)
-# Expected Output
-# <Book: Nineteen Eighty-Four>
+# Create a Book instance
+book = Book.objects.get(id=1)
+
+book.title = "Nineteen Eighty-Four"
+print(book.title)
+# expected output
+Nineteen Eighty-Four
