@@ -1,8 +1,15 @@
-#python command
+# Delete Operation
+
+```python
 from bookshelf.models import Book
 
-book = Book.objects.get(id=1);
-book.delete();
+# Delete the book instance
+book = Book.objects.get(title="Nineteen Eighty-Four")
+book.delete()
 
-#expected output
-the book record will be deleted
+# Try to retrieve the book again to confirm deletion
+books = Book.objects.all()
+print(books)
+
+# Expected Output
+# QuerySet[] or similar empty list, confirming deletion

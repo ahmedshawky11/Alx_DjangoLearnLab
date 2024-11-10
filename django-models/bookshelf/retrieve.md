@@ -1,12 +1,11 @@
-#python command
+# Retrieve Operation
+
+```python
 from bookshelf.models import Book
-#retrieve all books
-books = Book.objects.all();
 
-#retrieve a single book using id
-book = Book.objects.get(id=1)
-print(books);
-print(book)
+# Retrieve the book you just created
+book = Book.objects.get(title="1984")
+print(book.title, book.author, book.publication_year)
 
-#expected output
-#<QuerySet [<Book: 1984 George Orwell 1949>]>
+# Expected Output
+# 1984 George Orwell 1949
